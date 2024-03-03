@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Chat room</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="style.css">
+<script src="/webjars/jquery/jquery.min.js"></script>
+<script src="/webjars/sockjs-client/sockjs.min.js"></script>
+<script src="/webjars/stomp-websocket/stomp.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+<div id="name-form" class="bg-primary d-flex align-items-center">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-4 offset-md-4">
+				<div class="input-group">
+					<input id="name-value" placeholder="Enter your name" type="text" class="form-control" autofocus="autofocus">
+					<div class="input-group-append">
+						<button id="login" class="btn btn-dark">Enter</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="chat-room" class="d-none">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-6 offset-md-3">
+				<div class="card">
+					<div class="card-body">
+						<div class="input-group">
+							<input id="message" placeholder="Enter message" type="text" class="form-control" autofocus="autofocus">
+							<div class="input-group-append">
+								<button id="send-btn" class="btn btn-dark">Send</button>
+								<button id="logout" class="btn btn-dark">Logout</button>
+							</div>
+						</div>
+						<div class="table-responsive">
+							<table id="message-container-table">
+							
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
